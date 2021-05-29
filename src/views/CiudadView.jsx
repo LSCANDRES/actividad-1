@@ -11,7 +11,8 @@ export class CiudadView extends React.Component {
       pais: []
     };
   }
-      
+
+        
   componentDidMount() {
     this.setState({
         paises: localStorage.getItem('paises') ? JSON.parse(localStorage.getItem('paises')) : [],
@@ -68,7 +69,7 @@ export class CiudadView extends React.Component {
           <label>Ciudad:</label>
           <input type="text" required value={this.state.newCiudad} onChange={(e) => this.handleNewCiudad(e)}></input>
           <label>Pais:</label>
-          <select id="inputGroupSelect01" onChange={(e) => this.handleSelect(e)} value={JSON.stringify(this.state.pais)}>
+          <select  onChange={(e) => this.handleSelect(e)} value={JSON.stringify(this.state.pais)}>
 						<option value={JSON.stringify({})}>Select option</option>
                         { this.state.paises.map((pais, index) => (
                             <option key={index+1} value={JSON.stringify(pais)}>{pais.Pais}</option>

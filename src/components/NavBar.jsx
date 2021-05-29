@@ -15,26 +15,30 @@ export const NavBar = () => (
 
 
 					<li className="nav-item">
-						<Link to="/paises">
+						<Link to="/Paises">
 							Pais
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/ciudades">
+						<Link to="/Ciudades">
 							Ciudad
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/empresas">
+						<Link to="/Empresas">
 							Empresa
 						</Link>
 						
 					</li>
 					<li className="nav-item">
-						<Link to="/puestos">
+						<Link to="/Puestos">
 							Puestos
 						</Link>
-						
+					</li>
+					<li className="nav-item">
+						<Link to="/Api">
+							Api
+						</Link>
 					</li>
 				</ul>
 			</div>

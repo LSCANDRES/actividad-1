@@ -1,16 +1,18 @@
 import React from 'react';
 import {PaisList} from '../components/PaisList';
 
-export class PaisView extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      paises: [],
-      newPais: ''
-    };
-  }
 
-  componentDidMount() {
+export class PaisView extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        paises: [],
+        newPais: ''
+      };
+    }
+
+
+      componentDidMount() {
     this.setState({
         paises: localStorage.getItem('paises') ? JSON.parse(localStorage.getItem('paises')) : [],
     });
@@ -22,20 +24,24 @@ export class PaisView extends React.Component {
     }
   }
 
-  addNewPais = (newPais) => {
+
+
+addNewPais = (newPais) => {
         this.setState({
-            paises: [...this.state.paises, {'Pais': this.state.newPais,}],
+            paises: [...this.state.paises, {Pais: this.state.newPais,}],
             newPais: ''
         });
   }
 
-  deletePais = (id) => {
+
+deletePais = (id) => {
     this.setState({
       paises: this.state.paises.filter((_, idx) => idx !== id)
     });
   }
 
-  handleNewPais = (e) => {
+
+handleNewPais = (e) => {
     this.setState({
         newPais: e.target.value,
       }
@@ -50,6 +56,8 @@ export class PaisView extends React.Component {
     }
     this.addNewPais(e, this.state.newPais)
   }
+
+
 
   render() {
     return (
@@ -68,4 +76,3 @@ export class PaisView extends React.Component {
     );
   }
 }
-
