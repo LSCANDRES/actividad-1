@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom'
 
 export const NavBar = () => (
-	<nav className="navbar navbar-expand-lg">
+	<nav className="navbar navbar-expand-lg navbar-light bg-dark">
 		<div className="container-fluid">
 			<Link to="/">
-				Puestos 
+				Home 
 			</Link>
 
 			<div className="collapse navbar-collapse">
@@ -15,26 +15,25 @@ export const NavBar = () => (
 
 
 					<li className="nav-item">
-						<Link to="/paises">
-							Pais
+						<Link to="/Countries">
+							Countrie
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/ciudades">
-							Ciudad
+						<Link to="/Cities">
+							Citis
 						</Link>
-					</li>
+					{/* </li>
 					<li className="nav-item">
-						<Link to="/empresas">
-							Empresa
+						<Link to="/Business">
+							Business
 						</Link>
 						
 					</li>
 					<li className="nav-item">
-						<Link to="/puestos">
-							Puestos
-						</Link>
-						
+						<Link to="/jobs">
+							Jobs
+						</Link> */}
 					</li>
 				</ul>
 			</div>
