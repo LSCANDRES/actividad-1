@@ -40,3 +40,37 @@ export const DeleteCountrie = async (id) => {
         
     }
 };
+// Cities
+
+
+
+export const PostCities = async (places) => {
+    const configRequest = {
+        method: 'post',
+        url: 'https://api-fake-pilar-tecno.herokuapp.com/places',
+        data: {name: places}
+    }
+    try {
+        const res = await axios(configRequest)
+        return res.data
+    } catch (err) {
+        console.error(err)
+        
+    }
+}
+
+
+export const DeleteCities = async (id) => {
+    console.log(id)
+    const configRequest = {
+        method: 'DELETE',
+        url: 'https://api-fake-pilar-tecno.herokuapp.com/places'+id,
+    }
+    try {
+        const res = await axios(configRequest)
+        return res.data
+    } catch (err) {
+        console.error(err)
+        
+    }
+};

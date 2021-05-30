@@ -31,7 +31,7 @@ export class CountrieView extends React.Component {
   BorrarPais = (id) => {
     DeleteCountrie(id).then(res => {
       GetData().then(res => this.setState({
-        Countries: res.Countries
+        Countries: res.countries
 
       }));
 
@@ -60,7 +60,6 @@ export class CountrieView extends React.Component {
     return (
       
       <div>
-        {/* {this.state.withError && <p>hubo error</p>} */}
         <form onSubmit={this.handlenewCountrieSubmit}>
           <label>Countrie:</label>
           <input type="text" required value={this.state.newCountrie} onChange={(e) => this.handlenewCountrie(e)}></input>
